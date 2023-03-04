@@ -1,9 +1,15 @@
 import axios from 'axios';
 
-axios.get('https://xivapi.com')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
+axios.get('https://xivapi.com/character/search', {
+    params: {
+        name: 'Y'shtola Rhul',
+        server: 'Balmung',
+        api_key: 'YOUR_API_KEY_HERE'
+    }
+})
+.then(response => {
+    console.log(response.data.Results);
+})
+.catch(error => {
     console.error(error);
-  });
+});

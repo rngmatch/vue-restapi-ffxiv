@@ -46,16 +46,3 @@ export default {
 
 
 
-<style>
-  /* Add any custom styles you need here */
-  main {
-    min-height: 100vh;
-    background-image: linear-gradient(to right, #9B2DEF, #3958C8);
-    padding: 8px;
-    color: rgb(123, 31, 31);
-  }
-</style>
-
-<main>
-  <App />
-</main>
