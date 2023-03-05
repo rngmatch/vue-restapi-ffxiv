@@ -2,7 +2,7 @@ import axios from 'axios';
 
 axios.get('https://xivapi.com/character/search', {
     params: {
-        name: 'Y'shtola Rhul',
+        name: "Y'shtola Rhul",
         server: 'Balmung',
         api_key: 'YOUR_API_KEY_HERE'
     }
