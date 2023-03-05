@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-   <div>
+  <div>
     <form @submit.prevent="searchCharacters">
       <label for="name">Character Name:</label>
       <input id="name" type="text" v-model="name">
@@ -46,7 +46,6 @@ export default {
     </ul>
     <p v-else>No characters found.</p>
   </div>
-
 </template>
 
 

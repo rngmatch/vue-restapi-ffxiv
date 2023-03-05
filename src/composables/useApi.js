@@ -1,15 +1,19 @@
+/*
 import axios from 'axios';
+import { ref } from 'vue';
 
-axios.get('https://xivapi.com/', {
-    //params: {
-        //name: "Y'shtola Rhul",
-        //server: 'Balmung',
-        //api_key: 'YOUR_API_KEY_HERE'
-    //}
-})
-.then(response => {
-    console.log(response.data.Results);
-})
-.catch(error => {
-    console.error(error);
-});
+export function useApi() {
+  const characters = ref([]);
+  const searchCharacters = (name, server) => {
+    axios.get(`https://xivapi.com/character/search?name=${name}&server=${server}`)
+      .then(response => {
+        characters.value = response.data.Results;
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
+
+  return { characters, searchCharacters };
+}
+*/
