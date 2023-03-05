@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, VueRouter } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomePageView from '@/views/HomePageView.vue';
 
 const routes = [
