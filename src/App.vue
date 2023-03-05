@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-r from-fuchsia-900 to-blue-700 py-8 text-white">
+   <div>
     <form @submit.prevent="searchCharacters">
       <label for="name">Character Name:</label>
       <input id="name" type="text" v-model="name">
@@ -37,12 +37,21 @@ export default {
       <li v-for="character in characters" :key="character.ID">
         <h2>{{ character.Name }}</h2>
         <p>Server: {{ character.Server }}</p>
-        <p>Class: {{ character.ActiveClassJob.JobName }}</p>
+        <p>Lang: {{ character.Lang }}</p>
+        <p>Rank: {{ character.Rank }}</p>
+        <p>RankIcon: {{ character.RankIcon }}</p>
+        <p>FeastMatches: {{ character.FeastMatches }}</p>
+        <p>Avatar: <img :src="character.imageUrl"/> </p>
       </li>
     </ul>
     <p v-else>No characters found.</p>
   </div>
+
 </template>
+
+
+
+
 
 
 

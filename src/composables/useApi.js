@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-axios.get('https://xivapi.com/character/search', {
-    params: {
-        name: "Y'shtola Rhul",
-        server: 'Balmung',
-        api_key: 'YOUR_API_KEY_HERE'
-    }
+axios.get('https://xivapi.com/', {
+    //params: {
+        //name: "Y'shtola Rhul",
+        //server: 'Balmung',
+        //api_key: 'YOUR_API_KEY_HERE'
+    //}
 })
 .then(response => {
     console.log(response.data.Results);
